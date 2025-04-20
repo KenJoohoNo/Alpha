@@ -2,14 +2,18 @@
 <html lang="ko" class="dark">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/logo.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" type="image/svg+xml" href="./logo.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <meta name="description" content="Alpha - 로블록스 사업, 개발자 모집, 팀 모집, 아이템 판매 플랫폼" />
+    <meta name="theme-color" content="#0a0a0a" />
     <title>Alpha - 로블록스의 새로운 시작</title>
+    <!-- Polyfill for older browsers -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6,IntersectionObserver"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
   </head>
   <body>
     <div id="app"></div>
-    <script type="module" src="/src/main.ts"></script>
+    <script type="module" src="./src/main.ts"></script>
   </body>
 </html>
