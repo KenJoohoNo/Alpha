@@ -2,6 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Font definitions */
+:root {
+  --font-sans: 'Noto Sans KR', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+}
+
+@font-face {
+  font-family: 'Noto Sans KR';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/notosanskr/v36/PbyxFmXiEBPT4ITbgNA5Cgms3VYcOA-v3wD.woff2) format('woff2');
+  unicode-range: U+1100-11FF, U+3130-318F, U+A960-A97F, U+AC00-D7AF, U+D7B0-D7FF;
+}
+
 html {
   @apply scroll-smooth;
   scroll-behavior: smooth;
@@ -9,6 +23,9 @@ html {
   -webkit-overflow-scrolling: touch;
   -ms-overflow-style: none;
   scrollbar-width: none;
+  font-family: var(--font-sans);
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
 }
 
 html::-webkit-scrollbar {
@@ -31,6 +48,8 @@ body {
   background-position: center center;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-family: var(--font-sans);
+  letter-spacing: -0.01em;
 }
 
 .section {
@@ -191,10 +210,13 @@ body {
 @layer base {
   body {
     @apply bg-alpha-dark-900 text-white min-h-screen font-sans overflow-x-hidden;
+    font-family: var(--font-sans);
+    letter-spacing: -0.01em;
   }
 
   h1, h2, h3, h4, h5, h6 {
     @apply font-bold;
+    letter-spacing: -0.03em;
   }
 
   h1 {
@@ -580,4 +602,11 @@ img, video, canvas {
 
 svg {
   overflow: hidden;
+}
+
+/* Korean text specific styles */
+:lang(ko) {
+  word-break: keep-all;
+  line-break: strict;
+  letter-spacing: -0.04em;
 }
